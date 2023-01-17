@@ -1,5 +1,5 @@
 function Heading(){
-    return <header><h1>Keeper App</h1></header>;
+    return <header><h1>Keeper Web</h1></header>;
 }
 
 export default Heading;
