@@ -2,23 +2,18 @@ import React from 'react';
 import Footer from './Footer';
 import Heading from './Header';
 import Note from './Note';
-import notes from '../notes.js';
+import CreateNote from './CreateNote';
 
-function createNote(noteDesc){
-    return <Note
-        key={noteDesc.id}
-        title={noteDesc.title}
-        content={noteDesc.content}
-    />
-}
-
-function App(){
-    return <div>
-    <Heading />
-    <Footer />
-    {notes.map(createNote)}
-    <Note />
-    </div>
-}
-
-export default App;
+function App() {
+    return (
+      <div>
+        <Heading />
+        <CreateNote />
+        <Note key={1} title="Note title" content="Note content" />
+        <Footer />
+      </div>
+    );
+  }
+  
+  export default App;
+  
