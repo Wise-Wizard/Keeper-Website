@@ -12,11 +12,15 @@ function App() {
         setArray((prevValue)=>{return [...prevValue,note]});
     }
 
+    function deleteNote(id){
+        setArray(prevValue=>{return prevValue.filter((item,index)=>{return index!==id})})
+    }
+
     return (
       <div>
         <Heading />
         <CreateNote addNote={newNote}/>
-        {noteArray.map((item,index)=>{return (<Note key={index} id={index} title={item.title} content={item.content}/>)})}
+        {noteArray.map((item,index)=>{return (<Note key={index} id={index} title={item.title} content={item.content} delete={deleteNote}/>)})}
         <Footer />
       </div>
     );
