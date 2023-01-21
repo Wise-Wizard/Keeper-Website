@@ -5,6 +5,7 @@ import Heading from './Header';
 import Note from './Note';
 import CreateNote from './CreateNote';
 
+
 function App() {
     const [noteArray, setArray]=React.useState([]);
 
